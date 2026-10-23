@@ -71,12 +71,40 @@ details p{color:var(--mut);margin:10px 0 0}
 .cta-box .btn{background:#fff;color:#1b1540;margin:6px}
 footer{border-top:1px solid var(--bd);padding:32px 0;color:var(--mut);font-size:.88rem;text-align:center}
 footer a{margin:0 10px}
+
+.feat{background:radial-gradient(ellipse at 50% 0,#4a0c16 0,#16050b 65%);color:#fff3d6;position:relative;overflow:hidden}
+.feat h2{font-size:clamp(1.8rem,5vw,3rem);line-height:1.2}
+.feat .sub{color:#f0d5a8}
+.gold{background:linear-gradient(90deg,#ffd34d,#ff2d3d,#ffd34d,#ff2d3d);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:flow 5s linear infinite}
+@keyframes flow{to{background-position:300% 0}}
+@keyframes flow2{to{background-position:0 0,300% 0}}
+@keyframes shine{0%,55%{left:-120%}100%{left:150%}}
+@keyframes bob{50%{transform:translateY(-5px)}}
+@keyframes pulse{50%{box-shadow:0 0 16px 3px rgba(255,45,61,.8)}}
+.fg{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(285px,1fr))}
+.fc{position:relative;overflow:hidden;border:2px solid transparent;border-radius:16px;padding:20px;background:linear-gradient(#1c060c,#1c060c) padding-box,linear-gradient(90deg,#ffd34d,#e11d2e,#ffd34d,#e11d2e) border-box;background-size:auto,300% 100%;animation:flow2 4s linear infinite;transition:opacity .7s ease,transform .35s ease,box-shadow .3s ease}
+.fc:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(255,45,61,.4),0 0 22px rgba(255,211,77,.35)}
+.fc::after{content:"";position:absolute;top:0;left:-120%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,226,140,.22),transparent);transform:skewX(-20deg);animation:shine 5s ease-in-out infinite;animation-delay:calc(var(--i,0)*.35s);pointer-events:none}
+.ft{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.no{font-weight:800;font-size:.8rem;color:#2a0a10;background:linear-gradient(135deg,#ffe58a,#f5b400);border-radius:8px;padding:2px 10px;box-shadow:0 0 12px rgba(255,211,77,.55)}
+.ico2{font-size:1.8rem;display:inline-block;animation:bob 2.6s ease-in-out infinite}
+.fc h3{margin:0 0 10px;color:#ffd34d;font-size:1.1rem}
+.fc ul{list-style:none;margin:0;padding:0}
+.fc li{font-size:.9rem;padding:4px 0;color:#f6e6c6}
+.fc li::before{content:"✦";color:#ff3b4a;margin-right:8px}
+.hot{position:absolute;top:16px;right:-34px;transform:rotate(40deg);background:linear-gradient(90deg,#e11d2e,#ff5a36);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:1px;padding:3px 40px;animation:pulse 1.6s infinite;z-index:1}
+.bh{text-align:center;margin:48px 0 16px;font-size:1.4rem}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.chips span{padding:8px 16px;border-radius:99px;font-size:.88rem;color:#ffe9b0;border:1px solid #ffd34d;background:rgba(225,29,46,.18);box-shadow:0 0 12px rgba(255,211,77,.2)}
+.gbtn{display:inline-block;padding:14px 34px;border-radius:12px;font-weight:800;color:#2a0a10;background:linear-gradient(90deg,#ffd34d,#ff5a36,#ffd34d);background-size:200% 100%;animation:flow 3s linear infinite;box-shadow:0 0 24px rgba(255,90,54,.55)}
+.js .fc:not(.in){opacity:0;transform:translateY(26px)}
+@media(prefers-reduced-motion:reduce){.gold,.fc,.fc::after,.ico2,.hot,.gbtn{animation:none}.js .fc:not(.in){opacity:1;transform:none}}
 </style>
 </head>
 <body>
 <header><div class="w">
 <a class="logo grad" href="#top">YourApp</a>
-<nav><a href="#features">Features</a><a href="#screens">Screenshots</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
+<nav><a href="features.html">Features</a><a href="#screens">Screenshots</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
 <a class="btn" href="#contact">Buy / Demo</a>
 </div></header>
 
@@ -95,19 +123,11 @@ footer a{margin:0 10px}
 </div></section>
 
 <!-- FEATURES -->
-<section class="alt" id="features"><div class="w">
-<h2>Everything your platform needs</h2>
-<p class="sub">Edit this list to match the features your app really has.</p>
-<div class="grid">
-<div class="card"><div class="ico">🎙️</div><h3>Voice chat rooms</h3><p>Multi-seat audio rooms with mic control, room admins and background music.</p></div>
-<div class="card"><div class="ico">📡</div><h3>Live streaming</h3><p>Low-latency live broadcasts with real-time chat and viewer lists.</p></div>
-<div class="card"><div class="ico">🎁</div><h3>Virtual gifts</h3><p>Animated gifts, coins and diamonds, and a wallet for recharge and withdrawal.</p></div>
-<div class="card"><div class="ico">👑</div><h3>VIP &amp; levels</h3><p>Badges, entry effects and user levels that reward top supporters.</p></div>
-<div class="card"><div class="ico">💬</div><h3>Private messaging</h3><p>One-to-one chat, follow system, notifications and profiles.</p></div>
-<div class="card"><div class="ico">🏢</div><h3>Agency / host system</h3><p>Host applications, agency commissions and payout management.</p></div>
-<div class="card"><div class="ico">🛡️</div><h3>Moderation tools</h3><p>Report, ban and mute users and rooms from the admin panel.</p></div>
-<div class="card"><div class="ico">🌐</div><h3>Multi-language</h3><p>Language packs and RTL support. Add your own languages.</p></div>
-</div>
+<section class="feat" id="features"><div class="w">
+<h2><span class="gold">18 Powerful Features</span></h2>
+<p class="sub">Everything you need to run a profitable live audio and voice chat app.</p>
+<div class="chips"><span>💞 CP System</span><span>👑 SVIP &amp; VIP</span><span>🎙️ 10 / 15 / 20-seat rooms</span><span>🎲 Greedy &amp; Teen Patti</span><span>🚀 Room Rocket</span><span>🎁 Lucky Gift</span><span>🏦 Merchant &amp; Coin Sellers</span><span>💸 Easypaisa · JazzCash · USDT</span></div>
+<div style="text-align:center;margin-top:30px"><a class="gbtn" href="features.html">View all 18 features &rarr;</a></div>
 </div></section>
 
 <!-- SCREENSHOTS -->
