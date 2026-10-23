@@ -52,6 +52,7 @@ header nav{display:flex;gap:22px;font-size:.92rem;color:var(--mut)}
 .tags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
 .tags span{padding:8px 16px;border:1px solid var(--bd);border-radius:99px;background:var(--card);font-size:.9rem}
 .price{display:flex;flex-direction:column}
+.p2{max-width:820px;margin:0 auto}
 .price.pop{border-color:var(--ac);box-shadow:0 0 0 1px var(--ac)}
 .price .amt{font-size:2.2rem;font-weight:800;margin:8px 0}
 .price .amt small{font-size:.9rem;font-weight:400;color:var(--mut)}
@@ -75,7 +76,7 @@ footer a{margin:0 10px}
 <body>
 <header><div class="w">
 <a class="logo grad" href="#top">YourApp</a>
-<nav><a href="#features">Features</a><a href="#screens">Screenshots</a><a href="#admin">Admin Panel</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
+<nav><a href="#features">Features</a><a href="#screens">Screenshots</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
 <a class="btn" href="#contact">Buy / Demo</a>
 </div></header>
 
@@ -122,18 +123,6 @@ footer a{margin:0 10px}
 </div>
 </div></section>
 
-<!-- ADMIN -->
-<section class="alt" id="admin"><div class="w">
-<h2>Powerful admin panel</h2>
-<p class="sub">Show the backend: dashboard, users, rooms, gifts, payments, reports and settings.</p>
-<div class="admin">
-<div class="wide">[Screenshot: Dashboard]</div>
-<div class="wide">[Screenshot: User management]</div>
-<div class="wide">[Screenshot: Gifts &amp; items]</div>
-<div class="wide">[Screenshot: Payments / withdrawals]</div>
-</div>
-</div></section>
-
 <!-- TECH -->
 <section><div class="w">
 <h2>Technology stack</h2>
@@ -144,17 +133,14 @@ footer a{margin:0 10px}
 <!-- PRICING -->
 <section class="alt" id="pricing"><div class="w">
 <h2>Choose your package</h2>
-<p class="sub">One-time payment. Prices below are example placeholders: set your own.</p>
-<div class="grid">
-<div class="card price"><h3>Basic</h3><div class="amt">$499<small> one-time</small></div><p>Apps only, for developers who host themselves.</p>
-<ul><li>Android app source code</li><li>Backend source code</li><li>Admin panel source code</li><li>Setup documentation</li><li class="no">iOS source code</li><li class="no">Installation by our team</li><li class="no">Free updates</li></ul>
-<a class="btn o" href="#contact">Buy Basic</a></div>
-<div class="card price pop"><h3>Standard · Most popular</h3><div class="amt">$999<small> one-time</small></div><p>Everything you need to launch.</p>
-<ul><li>Android + iOS source code</li><li>Backend + admin panel</li><li>Setup documentation + video guide</li><li>Server installation by our team</li><li>3 months support</li><li>6 months free updates</li><li class="no">Custom branding</li></ul>
-<a class="btn" href="#contact">Buy Standard</a></div>
-<div class="card price"><h3>Extended</h3><div class="amt">$1,999<small> one-time</small></div><p>Full package with branding and support.</p>
-<ul><li>Everything in Standard</li><li>Rebranding (name, logo, colors)</li><li>Store-ready builds</li><li>Priority support, 12 months</li><li>12 months free updates</li><li>Commercial / unlimited-app license</li><li>Custom feature discussion</li></ul>
-<a class="btn o" href="#contact">Buy Extended</a></div>
+<p class="sub">One-time payment. Pick the package that fits your launch.</p>
+<div class="grid p2">
+<div class="card price"><h3>Android Only</h3><div class="amt">$3,000<small> USD</small></div><p>Android source code with everything to go live.</p>
+<ul><li>Android app source code</li><li>Backend source code</li><li>Admin panel source code</li><li>Rebranding</li><li>Server installation</li></ul>
+<a class="btn o" href="#contact">Buy Android Only</a></div>
+<div class="card price pop"><h3>Android + iOS</h3><div class="amt">$4,000<small> USD</small></div><p>Both platforms, fully set up for you.</p>
+<ul><li>Android + iOS app source code</li><li>Backend source code</li><li>Admin panel source code</li><li>Rebranding</li><li>Server installation</li></ul>
+<a class="btn" href="#contact">Buy Android + iOS</a></div>
 </div>
 </div></section>
 
